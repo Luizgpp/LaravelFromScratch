@@ -81,8 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    My Laravel from Scratch
                 </div>
+                <p><a href="/contact"> Contact</a> us to learn more.</p>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
