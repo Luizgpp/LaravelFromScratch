@@ -11,35 +11,9 @@
 |
  */
 
-/**
- * GET /projects (index)
- * GET /projects/create (create)
- * GET /projects/1 (show)
- * POST /projects (store)
- * GET /projects/1/edit (edit)
- * PATCH /projects/1 (update)
- * DELETE /projects/1 (destroy)
- */
-
 Route::get('/', 'PagesController@home');
 
-//Projects Routes
-
-Route::resource('projects', 'ProjectsController'); // this line replace all lines commented below
-
-// Route::get('/projects', 'ProjectsController@index'); //to display all projesct
-
-// Route::get('/projects/create', 'ProjectsController@create'); //to create a project
-
-// Route::get('/projects/{project}', 'ProjectsController@show'); //to show a project
-
-// Route::post('/projects', 'ProjectsController@store'); //to store a project
-
-// Route::get('/projects/{project}/edit', 'ProjectsController@edit'); //to get a project and fill the form to edit
-
-// Route::patch('/projects/{project}', 'ProjectsController@update'); //to update a project
-
-// Route::delete('/projects/{project}', 'ProjectsController@destroy'); //to remove a project
+Route::resource('projects', 'ProjectsController');
 
 Route::get('/contact', 'PagesController@contact');
 
