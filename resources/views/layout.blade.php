@@ -11,13 +11,14 @@
 
     </head>
     <body>        
-        <div class="container">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+        <div class="container is-fluid">
+            <nav class="level">
+                <div class="level-item"><a class="button is-fullwidth" href="/">Home</a></li></div>
+                <div class="level-item"><a class="button is-fullwidth" href="/projects">Projects</a></li></div>
+                <div class="level-item"><a class="button is-fullwidth" href="/about">About Us</a></li></div>
+                <div class="level-item"><a class="button is-fullwidth" href="/contact">Contact</a></li></div>
+            
+            </nav>
             @yield('content')
         </div>
     </body>
