@@ -9,6 +9,12 @@
 
         <title>@yield('title','Laravel from Scratch')</title>
 
+        <style>
+            .is-complete {
+                text-decoration: line-through;
+            }
+        </style>
+
     </head>
     <body>        
         <div class="container is-fluid">
@@ -19,7 +25,9 @@
                 <div class="level-item"><a class="button is-fullwidth" href="/contact">Contact</a></li></div>
             
             </nav>
-            @yield('content')
+            <div class="content">
+                @yield('content')
+            </div>
         </div>
     </body>
 </html>

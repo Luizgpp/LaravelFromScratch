@@ -10,15 +10,24 @@
 
     <div>{{$project->description}}</div>
 
+    @if($project->tasks->count())
     <h2 class="subtitle">Tasks</h2>
+        @foreach ($project->tasks as $task)
+            <form method="POST" action="/tasks/{{$task->id}}">
+                @csrf
+                @method('PATCH')
+                <div class="field">
+                    <div class="control">
+                        <label for="completed" class="checkbox {{ $task->completed ? 'is-complete': '' }}">
+                            <input type="checkbox" name="completed" onChange="this.form.submit()" {{ $task->completed ? 'checked': '' }}>
+                            {{$task->description}}
+                        </label>
+                    </div>
+                </div>
+            </form>
+        @endforeach
+    @endif
 
-    <ul>
-        @if($project->tasks->count())
-            @foreach ($project->tasks as $task)
-                <li>{{$task->description}}</li>    
-            @endforeach            
-        @endif
-    </ul>
 
     
 @endsection
