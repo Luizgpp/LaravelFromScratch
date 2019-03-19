@@ -13,7 +13,7 @@ class Project extends Model
         return $this->hasMany(Task::class);
     }
 
-    public function addTask($task)
+    public function addTask(array $task)
     {
         $this->tasks()->create($task);
     }
